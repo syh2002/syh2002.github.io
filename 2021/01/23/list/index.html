@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="#暑假第一个星期写的生词管理系统(&#96;&#96;&#96;)#include&lt;stdio.h&gt;#include&lt;string.h&gt;#include&lt;stdlib.h&gt;#define size 25#define _CRT_SECURE_NO_WARNINGSvoid menustart();void keydown();void menu();void menu1();void">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/01/23/list/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#暑假第一个星期写的生词管理系统(&#96;&#96;&#96;)#include&lt;stdio.h&gt;#include&lt;string.h&gt;#include&lt;stdlib.h&gt;#define size 25#define _CRT_SECURE_NO_WARNINGSvoid menustart();void keydown();void menu();void menu1();void">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-23T08:51:04.995Z">
+<meta property="article:modified_time" content="2021-01-23T08:50:35.066Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-list" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/23/list/" class="article-date">
+  <time datetime="2021-01-23T08:51:04.995Z" itemprop="datePublished">2021-01-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#暑假第一个星期写的生词管理系统<br>(```)<br>#include&lt;stdio.h&gt;<br>#include&lt;string.h&gt;<br>#include&lt;stdlib.h&gt;<br>#define size 25<br>#define _CRT_SECURE_NO_WARNINGS<br>void menustart();<br>void keydown();<br>void menu();<br>void menu1();<br>void menu2();</p>
+<p>struct unit//放数据<br>{<br>    char customername[size];<br>    int mima[6];<br>    char word[size];<br>    int number;</p>
+<p>};<br>struct Node//放指针<br>{</p>
+<pre><code>struct unit date;
+struct Node * next;</code></pre>
+<p>};</p>
+<p>struct Node * createList()//创建表头<br>{<br>    struct Node* headNode =(struct Node*)malloc(sizeof(struct Node));<br>    headNode-&gt;next =NULL;<br>    return headNode;<br>}<br>struct Node* createNode(struct unit date)//创建节点<br>{<br>    struct Node* newNode =(struct Node*)malloc(sizeof(struct Node));<br>    newNode-&gt;date =date;<br>    newNode-&gt;next =NULL;<br>    return newNode;<br>}</p>
+<p>void printfList(struct Node* headNode)//显示<br>{<br>    struct Node* pMove =headNode-&gt;next;<br>     printf(“单词\t序号\n”);<br>    while(pMove)<br>    {</p>
+<pre><code>    printf(&quot;%s\t%d\n&quot;,pMove-&gt;date.word,pMove-&gt;date.number);
+    pMove=pMove-&gt;next;
+&#125;
+printf(&quot;\n&quot;);//////////////////////////////////////////////////////// </code></pre>
+<p> }<br> void insertNodebyhead(struct Node* headNode,struct unit date)//添加<br> {<br>     struct Node* newNode =createNode(date);<br>     newNode-&gt;next= headNode-&gt;next;<br>     headNode-&gt;next=newNode;<br> }<br> void deleteappointNode(struct Node* headNode,char posdate[])//删除<br> {<br>     struct Node* posNode =headNode-&gt;next;<br>     struct Node* posFrontNode =headNode;<br>     if(posNode==NULL)<br>     {<br>         printf(“无此单词”);<br>     }<br>     while(strcmp(posNode-&gt;date.word,posdate))<br>     {<br>         posFrontNode=posNode;<br>         posNode=posFrontNode-&gt;next;<br>         if(posNode==NULL)<br>         {<br>             printf(“无此单词”); </p>
+<pre><code>     &#125;
+          return; 
+ &#125;</code></pre>
+<p>posFrontNode-&gt;next=posNode-&gt;next;<br>free(posNode);<br> }<br>struct Node* searchinfobydate(struct Node* headNode,char posdate[])//查找<br> {<br>     struct Node* pMove=headNode-&gt;next;</p>
+<pre><code> if(pMove==NULL)
+ return NULL;
+ while(strcmp(pMove-&gt;date.word,posdate))
+ &#123;
+
+     pMove =pMove-&gt;next; 
+ &#125;
+ return pMove;</code></pre>
+<p> }<br>void xiugai(struct Node* headNode,struct unit date,struct unit date2)<br>{<br>    struct Node* pMove=headNode-&gt;next;//移动 </p>
+<pre><code> if(pMove==NULL)
+ return;
+ while(strcmp(pMove-&gt;date.word,date.word))
+ &#123;
+
+     pMove =pMove-&gt;next; 
+ &#125;
+ strcpy(pMove-&gt;date.word,date2.word);</code></pre>
+<p>}<br>void readintofromfile(struct Node* headNode,const char filename[10]) //读文件<br>{<br>    FILE * fp;<br>    struct unit date;<br>    fp =fopen(filename,”r”);<br>    if(fp == NULL)<br>    {<br>      fp=fopen(filename,”w+”);<br>    }<br>    while(fscanf(fp,”%s\t%d\n”,date.word,&amp;date.number)!=EOF)<br>    {<br>        insertNodebyhead(headNode,date);<br>    }<br>    fclose(fp);<br>}<br>void writeinfotofile(struct Node* headNode,const char filename[10])//写文件<br>{<br>    FILE * fp;<br>    fp =fopen(filename,”w”);<br>    struct Node* pMove =headNode-&gt;next;<br>    while(pMove)<br>    {<br>        fprintf(fp,”%s\t%d\n”,pMove-&gt;date.word,pMove-&gt;date.number);<br>        pMove =pMove-&gt;next;<br>    }<br>    fclose(fp);<br>}<br>void readintofromfile2(struct Node* headNode,const char filename[10]) //读文件 账号<br>{<br>    FILE * fp;<br>    struct unit date;<br>    fp =fopen(filename,”r”);<br>    if(fp == NULL)<br>    {<br>      fp=fopen(filename,”w+”);<br>    }<br>    while(fscanf(fp,”%s\t%d\n”,date.customername,&amp;date.mima)!=EOF)<br>    {<br>        insertNodebyhead(headNode,date);<br>    }<br>    fclose(fp);<br>}<br>void writeinfotofile2(struct Node* headNode,const char filename[10])//写文件 账号<br>{<br>    FILE * fp;<br>    fp =fopen(filename,”w”);<br>    struct Node* pMove =headNode-&gt;next;<br>    while(pMove)<br>    {<br>        fprintf(fp,”%s\t%d\n”,pMove-&gt;date.customername,pMove-&gt;date.mima);<br>        pMove =pMove-&gt;next;<br>    }<br>    fclose(fp);<br>}<br>int main(void)<br>{<br>    while(1)<br>    {<br>       menu1();<br>       system(“pause”);<br>       system(“cls”);<br>    }</p>
+<pre><code>system(&quot;pause&quot;);
+
+return 0;</code></pre>
+<p> }<br>void menu1()<br> {<br>     printf(“—————-【生词管理系统】——————\n”);<br>     printf(“\t\t\n”);<br>    printf(“\t\t\n”);<br>    printf(“\t\t\n”);<br>    printf(“\t\t登录(按1)”);<br>    printf(“\t\t\n”);<br>    printf(“\t\t\n”);<br>    printf(“\t\t注册(按2)”);<br>    printf(“\t\t\n”);<br>    printf(“\t\t\n”);<br>       printf(“\t\t退出(按3)”);<br>       printf(“\t\t\n”);<br>    printf(“\t\t\n”);<br>    printf(“\t\t\n”);<br>    printf(“————————————————–\n”);      </p>
+<pre><code>   int key;
+   printf(&quot;请输入要使用的功能序号：&quot;);
+scanf(&quot;%d&quot;,&amp;key);
+   switch(key)
+   &#123;
+       case 1:    
+        &#123;
+            menustart();
+            system(&quot;pause&quot;);
+                break;
+    &#125;
+    case 2:
+        &#123;
+            menu2();
+            system(&quot;pause&quot;);
+                break; 
+    &#125;
+    case 3:
+           &#123; 
+            printf(&quot;----------------【退出】------------------\n&quot;);
+            printf(&quot;\t\t再见！\n&quot;); 
+            printf(&quot;------------------------------------------\n&quot;);
+            system(&quot;pause&quot;);
+            exit(0);
+                break;
+    &#125;    
+        default:
+        &#123;
+                  printf(&quot;-----------------【新功能开发中】------------------\n&quot;);
+
+                     break;
+        &#125;
+
+
+   &#125;
+    printf(&quot;--------------------------------------------------\n&quot;);      </code></pre>
+<p> }<br> void menustart()//登录<br>{<br>    int i=0;<br>    struct unit date;<br>    struct Node* pMove;<br>    struct Node* list  = createList();<br>    readintofromfile2(list,”customer.txt”);</p>
+<p>//while(i=0,i&lt;3,i++)<br>//{<br>printf(“—————-【生词管理系统】——————\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t\n”);<br>printf(“\t输入账号：”);<br> scanf(“%s”,date.customername);<br>printf(“\t\t\n”);<br>printf(“\t输入密码：”);<br>scanf(“%d”,&amp;date.mima);</p>
+<pre><code>pMove=searchinfobydate(list,date.word);
+            if(searchinfobydate(list,date.word)==NULL)
+             &#123; 
+                printf(&quot;无\n&quot;); 
+                system(&quot;pause&quot;);
+             &#125;
+             else
+             &#123;         system(&quot;pause&quot;);
+                       system(&quot;cls&quot;);
+
+                while(1)
+               &#123;  
+
+                       menu();
+                    keydown();
+                      system(&quot;pause&quot;);
+                       system(&quot;cls&quot;);
+                     &#125;
+              &#125; 
+printf(&quot;\t\t\n&quot;);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;\t\t\n&quot;);
+
+printf(&quot;--------------------------------------------------\n&quot;);                
+                //break;  
+                return;
+ &#125;</code></pre>
+<p>//}<br>void menu()//菜单<br>{</p>
+<p>printf(“—————-【生词管理系统】——————\n”);<br>printf(“\t\t1.输入今日词汇\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t2.查找并改变以往词汇\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t3.显示以往词汇\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t4.删除已记词汇\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t5.退出本程序\n”);<br>printf(“\t\t\n”);<br>printf(“\t\t新功能开发中\n”);<br>printf(“————————————————–\n”);<br>}<br>void keydown()//按键<br>{<br>    int key;<br>    int i=1;<br>    i+=1;<br>    struct unit date;<br>    struct unit date2;<br>    struct Node* pMove;<br>    struct Node* list  = createList();<br>    printf(“请输入要使用的功能序号：”);<br>    scanf(“%d”,&amp;key);<br>     readintofromfile(list,”date.txt”);<br>    switch(key)<br>    {<br>        case 1:<br>        {<br>                 printf(“—————-【输入今日词汇】——————\n”);<br>                 printf(“请输入\n”);<br>                 fflush(stdin);//清空缓冲区<br>                 scanf(“%s”,date.word);<br>                 date.number=i;<br>                 i++;<br>                 insertNodebyhead(list,date);<br>                     break;<br>        }<br>        case 2:<br>        {<br>                printf(“—————-【查改以往词汇】——————\n”);<br>                  printf(“请输入要改变的单词：\n”);<br>                 scanf(“%s”,date.word);</p>
+<pre><code>             pMove=searchinfobydate(list,date.word);//数据的地址 
+
+             if(searchinfobydate(list,date.word)==NULL)
+             &#123; 
+             printf(&quot;无此单词！&quot;); 
+             system(&quot;pause&quot;);
+             &#125;
+             else
+             &#123;
+                 printf(&quot;请输入要改成：\n&quot;);
+                  scanf(&quot;%s&quot;,date2.word);
+
+                xiugai(list,date,date2);
+              &#125; 
+                break;
+    &#125;
+    case 3:
+    &#123; 
+            printf(&quot;----------------【显示以往词汇】------------------\n&quot;);
+              printfList(list);
+                break;
+    &#125;   
+    case 4:
+    &#123; 
+            printf(&quot;----------------【删除已记词汇】------------------\n&quot;);
+             printf(&quot;请输入要删除&quot;);
+             scanf(&quot;%s&quot;,date.word);
+             deleteappointNode(list,date.word);
+
+                break;
+    &#125;    
+    case 5:
+    &#123; 
+            printf(&quot;----------------【退出】------------------\n&quot;);
+            printf(&quot;\t\t再见！\n&quot;); 
+            printf(&quot;------------------------------------------\n&quot;);
+
+            exit(0);
+                break;
+    &#125;    
+        default:
+        &#123;
+                  printf(&quot;-----------------【新功能开发中】------------------\n&quot;);
+         system(&quot;pause&quot;);
+                     break;
+        &#125;
+
+ &#125; </code></pre>
+<p> writeinfotofile(list,”date.txt”);<br>}<br>void menu2()//注册<br>{<br>    struct unit date;<br>    struct Node* pMove;<br>    struct Node* list  = createList();<br>    readintofromfile2(list,”.txt”);</p>
+<pre><code>printf(&quot;----------------【生词管理系统】------------------\n&quot;);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;\t输入账号：&quot;);
+printf(&quot;____________\n&quot;);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;\t输入密码：&quot;);
+printf(&quot;____________\n&quot;);
+scanf(&quot;%s%d&quot;,date.customername,&amp;date.mima);
+insertNodebyhead(list,date);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;注册完请重新打开程序！&quot;);
+printf(&quot;\t\t\n&quot;);
+printf(&quot;--------------------------------------------------\n&quot;);
+writeinfotofile2(list,&quot;customer.txt&quot;);</code></pre>
+<p>}</p>
+<p>(```)<br>#差不多就是这样</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/23/list/" data-id="ckk9haxgi0000psttbd3h2og3" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/12/01/FirstBlog/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/23/list/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/01/FirstBlog/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/12/01/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
