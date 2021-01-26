@@ -64,6 +64,121 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-New Document4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/26/New%20Document4/" class="article-date">
+  <time datetime="2021-01-26T10:26:23.292Z" itemprop="datePublished">2021-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">求平方根,小数的表示</span><br></pre></td></tr></table></figure>
+<h2 id="一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math-h。（这里使用-d来输出整数）"><a href="#一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math-h。（这里使用-d来输出整数）" class="headerlink" title="一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math.h。（这里使用%d来输出整数）"></a>一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math.h。（这里使用%d来输出整数）</h2><h3 id="C语言在中-lt-math-h-gt-中sqrt（）函数的使用："><a href="#C语言在中-lt-math-h-gt-中sqrt（）函数的使用：" class="headerlink" title="C语言在中&lt;math.h&gt;中sqrt（）函数的使用："></a>C语言在中&lt;math.h&gt;中sqrt（）函数的使用：</h3><p>###功 能: 计算一个非负实数的平方根<br>函数原型: 在VC6.0中的math.h头文件的函数原型为double sqrt(double);<br>说明：sqrt系Square Root Calculations（平方根计算），通过这种运算可以考验CPU的浮点能力。<br>头文件：math</p>
+<p>特别注意！！！<br>sqrt使用时大多需要要强制类型转化，因为sqrt只支持double和float类型，<br>可以这样<br>c=(int) sqrt((double)aa+bb);或者c=(int) sqrt((float)aa+bb);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">   #include &lt;math.h&gt;&#x2F;&#x2F;添加数学函数库</span><br><span class="line">    </span><br><span class="line">   int main()</span><br><span class="line">   &#123;</span><br><span class="line">   	double a &#x3D; 9.0;</span><br><span class="line">    </span><br><span class="line">   	printf(&quot;%lf\n&quot;,sqrt(a)); &#x2F;&#x2F;3.000000</span><br><span class="line">    </span><br><span class="line">   	printf(&quot;%.8lf\n&quot;,1+2*sqrt(3)&#x2F;(5-0.1));&#x2F;&#x2F;其中sqrt（）为计算平方根的函数</span><br><span class="line">    </span><br><span class="line">   	return  0;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="2f表示显示两位小数"><a href="#2f表示显示两位小数" class="headerlink" title="%.2f表示显示两位小数"></a>%.2f表示显示两位小数</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/26/New%20Document4/" data-id="ckkduut0100026ott7dn267ej" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-New Document3" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/26/New%20Document3/" class="article-date">
+  <time datetime="2021-01-26T10:26:23.286Z" itemprop="datePublished">2021-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="教训"><a href="#教训" class="headerlink" title="教训"></a>教训</h2><h1 id="1-要输入长为8的字符串-Segmentation-fault"><a href="#1-要输入长为8的字符串-Segmentation-fault" class="headerlink" title="1.要输入长为8的字符串(Segmentation fault)"></a>1.要输入长为8的字符串(Segmentation fault)</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">char a[9];</span><br></pre></td></tr></table></figure>
+<h1 id="2-连续输入"><a href="#2-连续输入" class="headerlink" title="2.连续输入"></a>2.连续输入</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">while(scanf(&quot;%lf%lf&quot;,&amp;n,&amp;m)!&#x3D;EOF)&#123;</span><br><span class="line">.......</span><br><span class="line">&#125;&#x2F;&#x2F;一个输入一个输出！</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/26/New%20Document3/" data-id="ckkduuszu00016ottfho013c4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-New Document2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/26/New%20Document2/" class="article-date">
+  <time datetime="2021-01-26T10:26:23.276Z" itemprop="datePublished">2021-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="C语言数据类型转换（自动类型转换-强制类型转换）"><a href="#C语言数据类型转换（自动类型转换-强制类型转换）" class="headerlink" title="C语言数据类型转换（自动类型转换+强制类型转换）"></a>C语言数据类型转换（自动类型转换+强制类型转换）</h2><h1 id="1-自动类型转换就是编译器默默地、隐式地、偷偷地进行的数据类型转换，这种转换不需要程序员干预，会自动发生"><a href="#1-自动类型转换就是编译器默默地、隐式地、偷偷地进行的数据类型转换，这种转换不需要程序员干预，会自动发生" class="headerlink" title="1.自动类型转换就是编译器默默地、隐式地、偷偷地进行的数据类型转换，这种转换不需要程序员干预，会自动发生"></a>1.自动类型转换就是编译器默默地、隐式地、偷偷地进行的数据类型转换，这种转换不需要程序员干预，会自动发生</h1><h1 id="2-自动类型转换是编译器根据代码的上下文环境自行判断的结果，有时候并不是那么“智能”，不能满足所有的需求。如果需要，程序员也可以自己在代码中明确地提出要进行类型转换，这称为强制类型转换。"><a href="#2-自动类型转换是编译器根据代码的上下文环境自行判断的结果，有时候并不是那么“智能”，不能满足所有的需求。如果需要，程序员也可以自己在代码中明确地提出要进行类型转换，这称为强制类型转换。" class="headerlink" title="2.自动类型转换是编译器根据代码的上下文环境自行判断的结果，有时候并不是那么“智能”，不能满足所有的需求。如果需要，程序员也可以自己在代码中明确地提出要进行类型转换，这称为强制类型转换。"></a>2.自动类型转换是编译器根据代码的上下文环境自行判断的结果，有时候并不是那么“智能”，不能满足所有的需求。如果需要，程序员也可以自己在代码中明确地提出要进行类型转换，这称为强制类型转换。</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(type_name) expression</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/26/New%20Document2/" data-id="ckkduut0c00036ott7eze1gtz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-New Document1" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/26/New%20Document1/" class="article-date">
+  <time datetime="2021-01-26T10:26:23.266Z" itemprop="datePublished">2021-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="Segmentation-fault"><a href="#Segmentation-fault" class="headerlink" title="Segmentation fault"></a>Segmentation fault</h2><h1 id="①-一种常见的导致提示segfault方法是访问空指针指向内存的值。"><a href="#①-一种常见的导致提示segfault方法是访问空指针指向内存的值。" class="headerlink" title="① 一种常见的导致提示segfault方法是访问空指针指向内存的值。"></a>① 一种常见的导致提示segfault方法是访问空指针指向内存的值。</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int *p &#x3D; NULL;</span><br><span class="line">*p &#x3D; 1;</span><br></pre></td></tr></table></figure>
+<h1 id="②-另一种提示segfault的情况是，你向只读内存中写数据。"><a href="#②-另一种提示segfault的情况是，你向只读内存中写数据。" class="headerlink" title="② 另一种提示segfault的情况是，你向只读内存中写数据。"></a>② 另一种提示segfault的情况是，你向只读内存中写数据。</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char *str &#x3D; &quot;Foo&quot;;  &#x2F;&#x2F; 编译器认为常量字符串是只读的</span><br><span class="line">*str &#x3D; &#39;b&#39;;         &#x2F;&#x2F; 所以这行语句非法，从而提示segfault</span><br></pre></td></tr></table></figure>
+<h1 id="③-以及悬垂指针指向一个不再存在的变量，如下所示："><a href="#③-以及悬垂指针指向一个不再存在的变量，如下所示：" class="headerlink" title="③ 以及悬垂指针指向一个不再存在的变量，如下所示："></a>③ 以及悬垂指针指向一个不再存在的变量，如下所示：</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">char *p &#x3D; NULL;</span><br><span class="line">&#123;</span><br><span class="line">    char c;</span><br><span class="line">    p &#x3D; &amp;c;</span><br><span class="line">&#125;</span><br><span class="line">&#x2F;&#x2F; 现在p是悬垂的了</span><br></pre></td></tr></table></figure>
+<h2 id="p变成了悬垂指针，因为它指向了一个花括号之外就不存在的变量c。而且当你给这个悬垂指针指向的内存赋值-如-p-’A’-时，你很可能得到一个segfault的提示。"><a href="#p变成了悬垂指针，因为它指向了一个花括号之外就不存在的变量c。而且当你给这个悬垂指针指向的内存赋值-如-p-’A’-时，你很可能得到一个segfault的提示。" class="headerlink" title="p变成了悬垂指针，因为它指向了一个花括号之外就不存在的变量c。而且当你给这个悬垂指针指向的内存赋值(如 *p=’A’)时，你很可能得到一个segfault的提示。"></a>p变成了悬垂指针，因为它指向了一个花括号之外就不存在的变量c。而且当你给这个悬垂指针指向的内存赋值(如 *p=’A’)时，你很可能得到一个segfault的提示。</h2>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/26/New%20Document1/" data-id="ckkduusz400006ott4r901ikc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-list" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2021/01/23/list/" class="article-date">
@@ -257,15 +372,23 @@
       <ul>
         
           <li>
+            <a href="/2021/01/26/New%20Document4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document1/">(no title)</a>
+          </li>
+        
+          <li>
             <a href="/2021/01/23/list/">管理系统</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/01/FirstBlog/">搭建GitHub Pages</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/01/hello-world/">Hello World</a>
           </li>
         
       </ul>

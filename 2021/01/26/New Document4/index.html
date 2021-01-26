@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1求平方根,小数的表示 一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math.h。（这里使用%d来输出整数）C语言在中&lt;math.h&gt;中sqrt（）函数的使用：###功 能: 计算一个非负实数的平方根函数原型: 在VC6.0中的math.h头文件的函数原型为double sqrt(double);说明：sqrt系Square Root">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/01/26/New%20Document4/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1求平方根,小数的表示 一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math.h。（这里使用%d来输出整数）C语言在中&lt;math.h&gt;中sqrt（）函数的使用：###功 能: 计算一个非负实数的平方根函数原型: 在VC6.0中的math.h头文件的函数原型为double sqrt(double);说明：sqrt系Square Root">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-26T10:26:23.292Z">
+<meta property="article:modified_time" content="2021-01-26T10:25:39.233Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-New Document4" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/26/New%20Document4/" class="article-date">
+  <time datetime="2021-01-26T10:26:23.292Z" itemprop="datePublished">2021-01-26</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">求平方根,小数的表示</span><br></pre></td></tr></table></figure>
+<h2 id="一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math-h。（这里使用-d来输出整数）"><a href="#一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math-h。（这里使用-d来输出整数）" class="headerlink" title="一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math.h。（这里使用%d来输出整数）"></a>一般的来说我们在进行开方运算时，都会使用sqrt函数进行开方运算。使用sqrt时就需要引用头文件math.h。（这里使用%d来输出整数）</h2><h3 id="C语言在中-lt-math-h-gt-中sqrt（）函数的使用："><a href="#C语言在中-lt-math-h-gt-中sqrt（）函数的使用：" class="headerlink" title="C语言在中&lt;math.h&gt;中sqrt（）函数的使用："></a>C语言在中&lt;math.h&gt;中sqrt（）函数的使用：</h3><p>###功 能: 计算一个非负实数的平方根<br>函数原型: 在VC6.0中的math.h头文件的函数原型为double sqrt(double);<br>说明：sqrt系Square Root Calculations（平方根计算），通过这种运算可以考验CPU的浮点能力。<br>头文件：math</p>
+<p>特别注意！！！<br>sqrt使用时大多需要要强制类型转化，因为sqrt只支持double和float类型，<br>可以这样<br>c=(int) sqrt((double)aa+bb);或者c=(int) sqrt((float)aa+bb);</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">   #include &lt;math.h&gt;&#x2F;&#x2F;添加数学函数库</span><br><span class="line">    </span><br><span class="line">   int main()</span><br><span class="line">   &#123;</span><br><span class="line">   	double a &#x3D; 9.0;</span><br><span class="line">    </span><br><span class="line">   	printf(&quot;%lf\n&quot;,sqrt(a)); &#x2F;&#x2F;3.000000</span><br><span class="line">    </span><br><span class="line">   	printf(&quot;%.8lf\n&quot;,1+2*sqrt(3)&#x2F;(5-0.1));&#x2F;&#x2F;其中sqrt（）为计算平方根的函数</span><br><span class="line">    </span><br><span class="line">   	return  0;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<h1 id="2f表示显示两位小数"><a href="#2f表示显示两位小数" class="headerlink" title="%.2f表示显示两位小数"></a>%.2f表示显示两位小数</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/26/New%20Document4/" data-id="ckkduut0100026ott7dn267ej" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/26/New%20Document3/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document4/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document3/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document2/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/26/New%20Document1/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/23/list/">管理系统</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
