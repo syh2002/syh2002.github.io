@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title:python(三)9.4.2给子类定义属性和方法9.4.3重写父类的方法9.3.4将实例用作属性9.4导入类9.4.1导入单个类 from 模块名 import 类 9.4.2储存多个类9.4.3代入多个类 from 模块名 import 类1，类2 9.4.4导入整个模块 import 模块名模块.类名（属性）去使用 9.4.5导入所有类from module_name impor">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2021/01/31/python(%E4%B8%89)/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="title:python(三)9.4.2给子类定义属性和方法9.4.3重写父类的方法9.3.4将实例用作属性9.4导入类9.4.1导入单个类 from 模块名 import 类 9.4.2储存多个类9.4.3代入多个类 from 模块名 import 类1，类2 9.4.4导入整个模块 import 模块名模块.类名（属性）去使用 9.4.5导入所有类from module_name impor">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-31T15:39:35.300Z">
+<meta property="article:modified_time" content="2021-01-31T15:39:35.302Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-python(三)" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/31/python(%E4%B8%89)/" class="article-date">
+  <time datetime="2021-01-31T15:39:35.300Z" itemprop="datePublished">2021-01-31</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-python-三"><a href="#title-python-三" class="headerlink" title="title:python(三)"></a>title:python(三)</h2><h1 id="9-4-2给子类定义属性和方法"><a href="#9-4-2给子类定义属性和方法" class="headerlink" title="9.4.2给子类定义属性和方法"></a>9.4.2给子类定义属性和方法</h1><h1 id="9-4-3重写父类的方法"><a href="#9-4-3重写父类的方法" class="headerlink" title="9.4.3重写父类的方法"></a>9.4.3重写父类的方法</h1><h1 id="9-3-4将实例用作属性"><a href="#9-3-4将实例用作属性" class="headerlink" title="9.3.4将实例用作属性"></a>9.3.4将实例用作属性</h1><h1 id="9-4导入类"><a href="#9-4导入类" class="headerlink" title="9.4导入类"></a>9.4导入类</h1><h1 id="9-4-1导入单个类"><a href="#9-4-1导入单个类" class="headerlink" title="9.4.1导入单个类"></a>9.4.1导入单个类</h1><p> from 模块名 import 类</p>
+<h1 id="9-4-2储存多个类"><a href="#9-4-2储存多个类" class="headerlink" title="9.4.2储存多个类"></a>9.4.2储存多个类</h1><h1 id="9-4-3代入多个类"><a href="#9-4-3代入多个类" class="headerlink" title="9.4.3代入多个类"></a>9.4.3代入多个类</h1><p> from 模块名 import 类1，类2</p>
+<h1 id="9-4-4导入整个模块"><a href="#9-4-4导入整个模块" class="headerlink" title="9.4.4导入整个模块"></a>9.4.4导入整个模块</h1><p> import 模块名<br>模块.类名（属性）去使用</p>
+<h1 id="9-4-5导入所有类"><a href="#9-4-5导入所有类" class="headerlink" title="9.4.5导入所有类"></a>9.4.5导入所有类</h1><p>from module_name import *（不推荐使用）</p>
+<h1 id="9-4-6在一个模块中导入另一个模块"><a href="#9-4-6在一个模块中导入另一个模块" class="headerlink" title="9.4.6在一个模块中导入另一个模块"></a>9.4.6在一个模块中导入另一个模块</h1><h1 id="9-7-7使用别名"><a href="#9-7-7使用别名" class="headerlink" title="9.7.7使用别名"></a>9.7.7使用别名</h1><p>如:from electric_car import ElectricCar as EC</p>
+<h1 id="9-5Python标准库（函数"><a href="#9-5Python标准库（函数" class="headerlink" title="9.5Python标准库（函数)"></a>9.5Python标准库（函数)</h1><p>在random模块中<br>randint（始，终)返回一个整数<br>choice（列表或元组）返回一个元素</p>
+<h1 id="9-6类编码风格"><a href="#9-6类编码风格" class="headerlink" title="9.6类编码风格"></a>9.6类编码风格</h1><p>类名用驼峰命名法。<br>实例名和模块名都采用小写格式 单词间用_划开<br>模块，类应有文档字符串<br>在类中可用空行分隔方法<br>模块中用空格分隔类<br>优先导入标准库模块import再添加一个空格再导入自己编写的模块import    </p>
+<h1 id="文件和异常"><a href="#文件和异常" class="headerlink" title="文件和异常"></a>文件和异常</h1><p>关键是 with 在不需要访问文件后将其关闭<br>open（文件名）打开文件<br>close（）可能有bug，with最佳:Python可帮你判断<br>read（）到达末尾时返回一个空字符串显示为一个空格<br>要删除要调用rstrip（）函数</p>
+<h1 id="10-1-2文件路径"><a href="#10-1-2文件路径" class="headerlink" title="10.1.2文件路径"></a>10.1.2文件路径</h1><p>显示文件路径用/<br>/t会被误解<br>绝对路径相对较长可赋值给一个变量   </p>
+<h1 id="10-1-4创建一个包含各行内容的列表"><a href="#10-1-4创建一个包含各行内容的列表" class="headerlink" title="10.1.4创建一个包含各行内容的列表"></a>10.1.4创建一个包含各行内容的列表</h1><p>readlines（）</p>
+<h1 id="10-1-5使用文件的内容"><a href="#10-1-5使用文件的内容" class="headerlink" title="10.1.5使用文件的内容"></a>10.1.5使用文件的内容</h1><p>strip（）删除空格<br> 注意<br>读取文本文件时，Python 将其中的所有文本都解读为字符串。如果读取的是数，并要将<br> 其作为数值使用，就必须使用函数int()将其转换为整数或使用函数float()将其转换为<br> 浮点数。</p>
+<h1 id="10-2写入空空间"><a href="#10-2写入空空间" class="headerlink" title="10.2写入空空间"></a>10.2写入空空间</h1><p>open（文件名，‘参数’）<br>w 写入模式<br>r 读取模式<br>a 附加模式<br>r+ 读写模式<br>参数默认是只读<br>如果open（）不存在将被自动创建<br>‘w’写入时要小心，因为文件存在会被返回前清空</p>
+<h1 id="10-2-2写入多行"><a href="#10-2-2写入多行" class="headerlink" title="10.2.2写入多行"></a>10.2.2写入多行</h1><p>write（“文本\n”）</p>
+<h1 id="10-2-3附加到文件"><a href="#10-2-3附加到文件" class="headerlink" title="10.2.3附加到文件"></a>10.2.3附加到文件</h1><p>‘a’附加模式</p>
+<h1 id="10-3异常"><a href="#10-3异常" class="headerlink" title="10.3异常"></a>10.3异常</h1><p>异常是使用try-except代码块<br>ZeroDivisionError无法按你要求完成</p>
+<h1 id="10-3-2使用try-except"><a href="#10-3-2使用try-except" class="headerlink" title="10.3.2使用try-except"></a>10.3.2使用try-except</h1><p>try:<br>  代码<br>except ZeroDivisionError:</p>
+<h1 id="10-3-4else代码"><a href="#10-3-4else代码" class="headerlink" title="10.3.4else代码"></a>10.3.4else代码</h1><p>try:<br>  代码<br>except 问题:<br>  print（提示）<br>else:<br>   下一步代码</p>
+<h1 id="10-3-5处理FileNotFoundError异常"><a href="#10-3-5处理FileNotFoundError异常" class="headerlink" title="10.3.5处理FileNotFoundError异常"></a>10.3.5处理FileNotFoundError异常</h1><p>with（filename，encoding=‘utf-8’）<br>二是给参双encoding指定了值，在系统的默认编码与要读取文件使用的<br> 锅不一致时，必须这样做。</p>
+<h1 id="10-3-6分析文本"><a href="#10-3-6分析文本" class="headerlink" title="10.3.6分析文本"></a>10.3.6分析文本</h1><p>split（）以空格为分隔符将字符串分割成多个部分。</p>
+<h1 id="10-3-8静默失败"><a href="#10-3-8静默失败" class="headerlink" title="10.3.8静默失败"></a>10.3.8静默失败</h1><p> except 后加 pass</p>
+<h1 id="10-4储存数据"><a href="#10-4储存数据" class="headerlink" title="10.4储存数据"></a>10.4储存数据</h1><p>JOON格式</p>
+<h1 id="10-4-1"><a href="#10-4-1" class="headerlink" title="10.4.1"></a>10.4.1</h1><p>要先导入<br>import json<br>josn.dump（要储存的数据，文件名）写入模式       </p>
+<h1 id="10-4-3重构"><a href="#10-4-3重构" class="headerlink" title="10.4.3重构"></a>10.4.3重构</h1>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/31/python(%E4%B8%89)/" data-id="ckklb94u200003ktt1zz6ektz" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/01/31/python(%E4%BA%8C)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/01/31/python(%E4%B8%89)/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/31/python(%E4%BA%8C)/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/30/python%E5%88%97%E8%A1%A8/">python列表</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/29/python%E5%8F%98%E9%87%8F%E5%92%8C%E7%AE%80%E5%8D%95%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">python（变量和简单数据类型）</a>
+          </li>
+        
+          <li>
+            <a href="/2021/01/29/python%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/">python学习（一）</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
