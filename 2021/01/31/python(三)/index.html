@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>python(三) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="title:python(三)9.4.2给子类定义属性和方法9.4.3重写父类的方法9.3.4将实例用作属性9.4导入类9.4.1导入单个类 from 模块名 import 类 9.4.2储存多个类9.4.3代入多个类 from 模块名 import 类1，类2 9.4.4导入整个模块 import 模块名模块.类名（属性）去使用 9.4.5导入所有类from module_name impor">
+  <meta name="description" content="9.4.2给子类定义属性和方法9.4.3重写父类的方法9.3.4将实例用作属性9.4导入类9.4.1导入单个类 from 模块名 import 类 9.4.2储存多个类9.4.3代入多个类 from 模块名 import 类1，类2 9.4.4导入整个模块 import 模块名模块.类名（属性）去使用 9.4.5导入所有类from module_name import *（不推荐使用） 9.4.6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="python(三)">
 <meta property="og:url" content="http://example.com/2021/01/31/python(%E4%B8%89)/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="title:python(三)9.4.2给子类定义属性和方法9.4.3重写父类的方法9.3.4将实例用作属性9.4导入类9.4.1导入单个类 from 模块名 import 类 9.4.2储存多个类9.4.3代入多个类 from 模块名 import 类1，类2 9.4.4导入整个模块 import 模块名模块.类名（属性）去使用 9.4.5导入所有类from module_name impor">
+<meta property="og:description" content="9.4.2给子类定义属性和方法9.4.3重写父类的方法9.3.4将实例用作属性9.4导入类9.4.1导入单个类 from 模块名 import 类 9.4.2储存多个类9.4.3代入多个类 from 模块名 import 类1，类2 9.4.4导入整个模块 import 模块名模块.类名（属性）去使用 9.4.5导入所有类from module_name import *（不推荐使用） 9.4.6">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-01-31T15:39:35.300Z">
-<meta property="article:modified_time" content="2021-01-31T15:39:35.302Z">
+<meta property="article:modified_time" content="2021-01-31T15:42:18.766Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -76,10 +76,19 @@
   <div class="article-inner">
     
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      python(三)
+    </h1>
+  
+
+      </header>
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="title-python-三"><a href="#title-python-三" class="headerlink" title="title:python(三)"></a>title:python(三)</h2><h1 id="9-4-2给子类定义属性和方法"><a href="#9-4-2给子类定义属性和方法" class="headerlink" title="9.4.2给子类定义属性和方法"></a>9.4.2给子类定义属性和方法</h1><h1 id="9-4-3重写父类的方法"><a href="#9-4-3重写父类的方法" class="headerlink" title="9.4.3重写父类的方法"></a>9.4.3重写父类的方法</h1><h1 id="9-3-4将实例用作属性"><a href="#9-3-4将实例用作属性" class="headerlink" title="9.3.4将实例用作属性"></a>9.3.4将实例用作属性</h1><h1 id="9-4导入类"><a href="#9-4导入类" class="headerlink" title="9.4导入类"></a>9.4导入类</h1><h1 id="9-4-1导入单个类"><a href="#9-4-1导入单个类" class="headerlink" title="9.4.1导入单个类"></a>9.4.1导入单个类</h1><p> from 模块名 import 类</p>
+        <h1 id="9-4-2给子类定义属性和方法"><a href="#9-4-2给子类定义属性和方法" class="headerlink" title="9.4.2给子类定义属性和方法"></a>9.4.2给子类定义属性和方法</h1><h1 id="9-4-3重写父类的方法"><a href="#9-4-3重写父类的方法" class="headerlink" title="9.4.3重写父类的方法"></a>9.4.3重写父类的方法</h1><h1 id="9-3-4将实例用作属性"><a href="#9-3-4将实例用作属性" class="headerlink" title="9.3.4将实例用作属性"></a>9.3.4将实例用作属性</h1><h1 id="9-4导入类"><a href="#9-4导入类" class="headerlink" title="9.4导入类"></a>9.4导入类</h1><h1 id="9-4-1导入单个类"><a href="#9-4-1导入单个类" class="headerlink" title="9.4.1导入单个类"></a>9.4.1导入单个类</h1><p> from 模块名 import 类</p>
 <h1 id="9-4-2储存多个类"><a href="#9-4-2储存多个类" class="headerlink" title="9.4.2储存多个类"></a>9.4.2储存多个类</h1><h1 id="9-4-3代入多个类"><a href="#9-4-3代入多个类" class="headerlink" title="9.4.3代入多个类"></a>9.4.3代入多个类</h1><p> from 模块名 import 类1，类2</p>
 <h1 id="9-4-4导入整个模块"><a href="#9-4-4导入整个模块" class="headerlink" title="9.4.4导入整个模块"></a>9.4.4导入整个模块</h1><p> import 模块名<br>模块.类名（属性）去使用</p>
 <h1 id="9-4-5导入所有类"><a href="#9-4-5导入所有类" class="headerlink" title="9.4.5导入所有类"></a>9.4.5导入所有类</h1><p>from module_name import *（不推荐使用）</p>
@@ -117,7 +126,7 @@
   
     <a href="/2021/01/31/python(%E4%BA%8C)/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title"></div>
+      <div class="article-nav-title">python(二)</div>
     </a>
   
 </nav>
@@ -154,11 +163,11 @@
       <ul>
         
           <li>
-            <a href="/2021/01/31/python(%E4%B8%89)/">(no title)</a>
+            <a href="/2021/01/31/python(%E4%B8%89)/">python(三)</a>
           </li>
         
           <li>
-            <a href="/2021/01/31/python(%E4%BA%8C)/">(no title)</a>
+            <a href="/2021/01/31/python(%E4%BA%8C)/">python(二)</a>
           </li>
         
           <li>
